@@ -11,8 +11,12 @@
             font-family: Arial, sans-serif;
             background-color: #000; /* Чёрный фон */
             color: #fff; /* Белый текст */
-            text-align: center;
+            text-align: center; /* Центрирование содержимого */
             overflow-x: hidden;
+            position: relative; /* Для абсолютного позиционирования футера */
+            min-height: 100vh; /* Занимает всю высоту экрана */
+            display: flex; /* Используем flexbox для выравнивания контента */
+            flex-direction: column; /* Вертикальное расположение элементов */
         }
 
         /* Логотип */
@@ -20,7 +24,7 @@
             position: relative;
             width: 200px;
             height: 200px;
-            margin: 50px auto;
+            margin: 50px auto; /* Центрирование логотипа */
         }
 
         .circle {
@@ -44,14 +48,7 @@
         h1 {
             font-size: 48px;
             color: #007bff; /* Синий цвет */
-            text-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 30px #007bff;
-            animation: shimmer 5s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { text-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 30px #007bff; }
-            50% { text-shadow: 0 0 20px #007bff, 0 0 40px #007bff, 0 0 60px #007bff; }
-            100% { text-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 30px #007bff; }
+            margin: 20px 0; /* Отступы вокруг заголовка */
         }
 
         /* Описание компании */
@@ -63,9 +60,9 @@
 
         /* Кнопка Telegram */
         .telegram-button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 10px 20px;
+            display: inline-block; /* Компактный размер */
+            margin: 30px auto 0; /* Горизонтальное центрирование */
+            padding: 10px 20px; /* Отступы внутри кнопки */
             font-size: 18px;
             color: #fff;
             background-color: #007bff; /* Синий цвет */
@@ -73,10 +70,23 @@
             border-radius: 5px;
             text-decoration: none;
             transition: background-color 0.3s ease;
+            max-width: 300px; /* Явно ограничиваем максимальную ширину */
+            width: fit-content; /* Ширина по содержимому */
         }
 
         .telegram-button:hover {
             background-color: #0056b3; /* Тёмно-синий при наведении */
+        }
+
+        /* Футер */
+        footer {
+            position: absolute; /* Абсолютное позиционирование */
+            bottom: 0; /* Прикрепление к нижней части страницы */
+            width: 100%; /* Ширина по всей ширине страницы */
+            padding: 10px 0;
+            font-size: 14px;
+            color: #aaa; /* Серый цвет */
+            background-color: #000; /* Чёрный фон */
         }
     </style>
 </head>
@@ -92,16 +102,23 @@
     </div>
 
     <!-- Название компании -->
-    <h1>LofDaB</h1>
+    <h1>LOFDAB</h1>
 
     <!-- Описание компании -->
     <p>
-        LofDaB — компания, специализирующаяся на создании игр для ПК и мобильных устройств.<br>
+        LOFDAB — компания, специализирующаяся на создании игр для ПК и мобильных устройств.<br>
         Мы создаём увлекательные проекты, которые объединяют игроков по всему миру.
     </p>
 
-    <!-- Кнопка Telegram -->
-    <a href="https://t.me/Lofdab" target="_blank" class="telegram-button">Подписаться на Telegram</a>
+    <!-- Кнопка Telegram (обёрнута в контейнер для центрирования) -->
+    <div style="text-align: center;">
+        <a href="https://t.me/Lofdab" target="_blank" class="telegram-button">Подписаться на Telegram</a>
+    </div>
+
+    <!-- Футер -->
+    <footer>
+        © LOFDAB. 2025, Все права защищены.
+    </footer>
 
 </body>
 </html>
