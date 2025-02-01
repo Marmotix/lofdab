@@ -37,15 +37,6 @@
         <!-- Название компании -->
         <h1>LOFDAB</h1>
 
-        <!-- Выпадающий список игр -->
-        <div style="text-align: center; margin-top: 30px;">
-            <select id="game-selector" onchange="handleGameSelection()">
-                <option value="">Выберите игру</option>
-                <option value="https://t.me/LofdabSchool">LOFDAB SCHOOL</option>
-                <option value="https://t.me/1221Game">1221</option>
-            </select>
-        </div>
-
         <!-- Описание компании -->
         <p>
             LOFDAB — компания, специализирующаяся на создании игр для ПК и мобильных устройств.<br>
@@ -53,7 +44,7 @@
         </p>
 
         <!-- Кнопка Telegram -->
-        <div style="text-align: center;">
+        <div style="text-align: center; margin-top: 30px;">
             <a href="https://t.me/Lofdab" target="_blank" class="telegram-button">Подписаться на Telegram</a>
         </div>
 
@@ -63,16 +54,6 @@
         </footer>
 
     </div>
-
-    <!-- Скрипт для обработки выбора игры -->
-    <script>
-        function handleGameSelection() {
-            const selectedGame = document.getElementById('game-selector').value;
-            if (selectedGame) {
-                window.location.href = selectedGame;
-            }
-        }
-    </script>
 
 </body>
 </html>
