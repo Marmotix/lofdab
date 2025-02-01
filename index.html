@@ -8,10 +8,10 @@
 </head>
 <body>
 
-    <!-- Навигационное меню -->
-    <nav>
-        <ul class="nav-menu">
-            <li><a href="index.html">Главное</a></li>
+    <!-- Боковое меню -->
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#main">Главное</a></li>
             <li class="dropdown">
                 <a href="#">Игры</a>
                 <ul class="dropdown-content">
@@ -22,33 +22,57 @@
         </ul>
     </nav>
 
-    <!-- Логотип -->
-    <div class="logo-container">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
+    <!-- Основной контент -->
+    <div class="main-content">
+
+        <!-- Логотип -->
+        <div class="logo-container">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+
+        <!-- Название компании -->
+        <h1>LOFDAB</h1>
+
+        <!-- Выпадающий список игр -->
+        <div style="text-align: center; margin-top: 30px;">
+            <select id="game-selector" onchange="handleGameSelection()">
+                <option value="">Выберите игру</option>
+                <option value="https://t.me/LofdabSchool">LOFDAB SCHOOL</option>
+                <option value="https://t.me/1221Game">1221</option>
+            </select>
+        </div>
+
+        <!-- Описание компании -->
+        <p>
+            LOFDAB — компания, специализирующаяся на создании игр для ПК и мобильных устройств.<br>
+            Мы создаём увлекательные проекты, которые объединяют игроков по всему миру.
+        </p>
+
+        <!-- Кнопка Telegram -->
+        <div style="text-align: center;">
+            <a href="https://t.me/Lofdab" target="_blank" class="telegram-button">Подписаться на Telegram</a>
+        </div>
+
+        <!-- Футер -->
+        <footer>
+            © LOFDAB. 2025, Все права защищены.
+        </footer>
+
     </div>
 
-    <!-- Название компании -->
-    <h1>LOFDAB</h1>
-
-    <!-- Описание компании -->
-    <p>
-        LOFDAB — компания, специализирующаяся на создании игр для ПК и мобильных устройств.<br>
-        Мы создаём увлекательные проекты, которые объединяют игроков по всему миру.
-    </p>
-
-    <!-- Кнопка Telegram -->
-    <div style="text-align: center;">
-        <a href="https://t.me/Lofdab" target="_blank" class="telegram-button">Подписаться на Telegram</a>
-    </div>
-
-    <!-- Футер -->
-    <footer>
-        © LOFDAB. 2025, Все права защищены.
-    </footer>
+    <!-- Скрипт для обработки выбора игры -->
+    <script>
+        function handleGameSelection() {
+            const selectedGame = document.getElementById('game-selector').value;
+            if (selectedGame) {
+                window.location.href = selectedGame;
+            }
+        }
+    </script>
 
 </body>
 </html>
