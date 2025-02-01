@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LofDaB</title>
+    <style>
+        /* Общие стили */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Чёрный фон */
+            color: #fff; /* Белый текст */
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* Логотип */
+        .logo-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            animation: pulse 3s infinite alternate;
+        }
+
+        .circle:nth-child(1) { width: 200px; height: 200px; background: rgba(0, 123, 255, 0.1); }
+        .circle:nth-child(2) { width: 170px; height: 170px; background: rgba(0, 123, 255, 0.2); top: 15px; left: 15px; }
+        .circle:nth-child(3) { width: 140px; height: 140px; background: rgba(0, 123, 255, 0.3); top: 30px; left: 30px; }
+        .circle:nth-child(4) { width: 110px; height: 110px; background: rgba(0, 123, 255, 0.4); top: 45px; left: 45px; }
+        .circle:nth-child(5) { width: 80px; height: 80px; background: rgba(0, 123, 255, 0.5); top: 60px; left: 60px; }
+
+        @keyframes pulse {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        /* Название компании */
+        h1 {
+            font-size: 48px;
+            color: #007bff; /* Синий цвет */
+            text-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 30px #007bff;
+            animation: shimmer 5s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { text-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 30px #007bff; }
+            50% { text-shadow: 0 0 20px #007bff, 0 0 40px #007bff, 0 0 60px #007bff; }
+            100% { text-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 30px #007bff; }
+        }
+
+        /* Описание компании */
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Кнопка Telegram */
+        .telegram-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007bff; /* Синий цвет */
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .telegram-button:hover {
+            background-color: #0056b3; /* Тёмно-синий при наведении */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Логотип -->
+    <div class="logo-container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <!-- Название компании -->
+    <h1>LofDaB</h1>
+
+    <!-- Описание компании -->
+    <p>
+        LofDaB — компания, специализирующаяся на создании игр для ПК и мобильных устройств.<br>
+        Мы создаём увлекательные проекты, которые объединяют игроков по всему миру.
+    </p>
+
+    <!-- Кнопка Telegram -->
+    <a href="https://t.me/Lofdab" target="_blank" class="telegram-button">Подписаться на Telegram</a>
+
+</body>
+</html>
